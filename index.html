@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Acessibilidade no Front-end</title>
+  </head>
+  <body>
+    <h1>Acessibilidade no Front-end</h1>
+    <h2>Semântica</h2>
+    <header>
+      <div class="container">
+        <nav role="navigation">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="s-hero">
+      <div class="container">
+        <h2>Subtítulo da seção</h2>
+        <p>Texto da seção</p>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <div class="container">
+        <h2>Subtítulo do Rodapé</h2>
+        <p>Texto do Rodapé</p>
+      </div>
+    </footer>
+
+    <h1>Acessibilidade no Front-end</h1>
+    <h2>Garantir que o meu site seja navegavél pelo teclado</h2>
+    <button tabindex="1">1</button>
+    <button tabindex="3">2</button>
+    <button tabindex="0">3</button>
+    <button tabindex="2">4</button>
+    <button tabindex="-1">5</button>
+
+    <h1>Acessibilidade no Front-end</h1>
+    <h2>Adicionar textos alternativos nas imagens</h2>
+    <img src="./imagens/logo.png" alt="Logo do Canal" />
+    <img src="./imagens/paissagem.png" alt="Uma paissagem de floresta" />
+    <img src="./imagens/estrada.png" alt="Uma estrada cheia de carros" />
+    <img
+      src="./imagens/praia.png"
+      alt="Uma foto de uma praia cheia de pessoas"
+    />
+
+    <h1>Acessibilidade no Front-end</h1>
+    <h2>Utilizar Etiqueta de Formulários</h2>
+    <form>
+      <label for="input-name">Nome:</label>
+      <input type="text" id="input-name" placeholder="Digite o seu nome.." />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <h1>Acessibilidade no Front-end</h1>
+    <h2>Aumentar a área de clique do botão</h2>
+    <button>X</button>
+
+    <h1>Acessibilidade no Front-end</h1>
+    <h2>Utilizando técnicas de Arial</h2>
+
+    <nav role="navigation">
+      <ul>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button id="js-button">Clique</button>
+
+    <script>
+      const btn = document.getElementById('js-button');
+
+      btn.addEventListener('click', () => {
+        alert('Você Clicou');
+      });
+    </script>
+  </body>
 </html>
