@@ -56,8 +56,8 @@
     <h1>Acessibilidade no Front-end</h1>
     <h2>Utilizar Etiqueta de Formulários</h2>
     <form>
-      <label for="input-name">Nome:</label>
-      <input type="text" id="input-name" placeholder="Digite o seu nome.." />
+      <label id="label-name" for="input-name">Nome:</label>
+      <input aria-labelledby="label-name" type="text" id="input-name" placeholder="Digite o seu nome.." />
       <button type="submit">Enviar</button>
     </form>
 
@@ -75,13 +75,22 @@
       </ul>
     </nav>
 
-    <button id="js-button">Clique</button>
+    <button id="js-button" role="button" aria-label="Botão para Fechar">X</button>
+
+    <form>
+      <label id="label-password" for="input-password">Senha:</label>
+      <input aria-labelledby="label-password" type="password" id="input-password">
+      <p id="passwordDesc">Sua senha ter pelo menos 8 caracteres</p>
+      <input type="password" aria-describedby="passwordDesc">
+    </form>
+
+    <p aria-hidden="true">Esse texto não é importante</p>
 
     <script>
       const btn = document.getElementById('js-button');
 
       btn.addEventListener('click', () => {
-        alert('Você Clicou');
+        alert('Fechou');
       });
     </script>
   </body>
